@@ -1,0 +1,172 @@
+/* ============================
+    Custom Properties
+ ============================ */
+:root {
+    --clr-p: hsla(0, 0%, 100%, 0.75);
+    --light-grey: hsl(0, 0%, 95%);
+    --br-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --v-dark-cyan: hsl(179, 100%, 13%);
+    --font-l: 'Big Shoulders Display', cursive;
+    --font-m: 'Lexend Deca', sans-serif;
+}
+
+ /* ============================
+    Reset
+ ============================ */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--light-grey);
+}
+
+/* ============================
+    Main
+ ============================ */
+main.container {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 230px;
+    height: 480px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 10px 10px 0 45px;
+}
+
+.card-title {
+    color: var(--light-grey);
+    font-family: var(--font-l);
+    text-transform: uppercase;
+    font-size: 36px;
+    margin: -40px 0;
+}
+
+.card p {
+    color: var(--clr-p);
+    font-family: var(--font-m);
+    font-size: 14px;
+    width: 85%;
+    margin-top: -20px;
+    line-height: 1.6;
+}
+
+button {
+    font-family: var(--font-m);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* ============================
+    First Card
+ ============================ */
+div.A {
+    background-color: var(--br-orange);
+    border-radius: 10px 0 0 10px;
+}
+
+div.A > button {
+    color: var(--br-orange);
+    border: 1px solid var(--br-orange);
+}
+
+div.A > button:hover {
+    outline: 2px solid var(--light-grey);
+    background-color: var(--br-orange);
+    color: var(--clr-p);
+}
+
+/* ============================
+    Second Card
+ ============================ */
+div.B {
+    background-color: var(--dark-cyan);
+}
+
+div.B > button {
+    color: var(--dark-cyan);
+    border: 1px solid var(--dark-cyan);
+}
+
+div.B > button:hover {
+    outline: 2px solid var(--light-grey);
+    background-color: var(--dark-cyan);
+    color: var(--clr-p);
+}
+
+/* ============================
+    Third Card
+ ============================ */
+div.C {
+    background-color: var(--v-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+
+div.C > button {
+    color: var(--v-dark-cyan);
+    border: 1px solid var(--v-dark-cyan);
+}
+
+div.C > button:hover {
+    outline: 2px solid var(--light-grey);
+    background-color: var(--v-dark-cyan);
+    color: var(--clr-p);
+}
+
+/* ============================
+    attribution (default)
+ ============================ */
+.attribution {
+    font-size: 11px;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: -90px;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* ============================
+    responsive for tablet and mobile size
+ ============================ */
+@media (max-width: 855px) and (min-width: 570px) {
+    .card {
+        width: 50%;
+        height: 430px;
+    }
+    div.A {
+        border-radius: 10px 10px 0 0;
+        margin-top: 3em;
+    }
+    div.C { border-radius: 0 0 10px 10px; }
+
+    .attribution { margin-top: 0; }
+}
+
+@media (max-width: 569px) {
+
+    .card { height: 400px; }
+    .card-title { margin: 0; }
+    .card p { width: 95%; }
+    .card button { margin: -40px 0 10px; }
+
+    div.A {
+        margin-top: 4em;
+        border-radius: 10px 10px 0 0;
+    }
+    div.C { border-radius: 0 0 10px 10px; }
+
+    .attribution { margin-top: 0; }
+}
